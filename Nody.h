@@ -174,20 +174,23 @@ void destroy()
 			puts("\nLIST_LINKED::OPERATION::destroy()->list empty ...nothing to destroy");
 			return;
 		}
-		linked_list *dummyPtr=list->get_tip();
+
 		while(getsize()!=0)
 		{
-			printf("\nLIST_LINKED::OPERATION::destroy()-> list node mem block:0x%x",dummyPtr);
-			dummyPtr=dummyPtr->prev;
-			//free(dummyPtr->next->payload); //experimental..
-			free(dummyPtr->next);
-			dummyPtr->next=NULL;
+			printf("\nLIST_LINKED::OPERATION::destroy()-> list node mem block:0x%x size remaining(%d)",list,getsize());
+
+			list=list->prev;
+			free(list->next);
+			list->next=NULL;
 			nodes-=1;
+
 		}
-		copyNode(list,dummyPtr);
+		printf("\nseed node block:%x list r/w header node:%x",root,list);
+		/*copyNode(list,dummyPtr);
 		list=dummyPtr;
+		*/
 		
-		printf("\n\n data::lost%x %x %x",list,root,dummyPtr);
+	//	printf("\n\n data::lost%x %x %x",list,root,dummyPtr);
 
 		printf("\nremaining nodes:%d list seed block :0x%x",getsize(),root);
 		//printf("\n\nlist data::%x",list->next);
