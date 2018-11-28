@@ -12,6 +12,10 @@ You can find same example code in respo named as STACK_CHILD().cpp
 
 # how to setup..
 just extract the Nody.h from archive then copy to your project directory and just include the file..
+like this one..
+![image](https://user-images.githubusercontent.com/24197201/49135507-fe84ae00-f30e-11e8-98f2-94ca58e5666c.png)
+
+# here you go..everything is ready !
 
 
 
