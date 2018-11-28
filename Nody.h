@@ -10,11 +10,31 @@
 
 //use this payload to feed your data and cast its pointer to void while inserting to list or stack..
 
-struct payload
-{
-	char *str;
-};
 
+/*
+					Mr.owl says
+			    ______________
+			   /              \
+			  /  ___     ___   \    _____________________
+			  |  \_/     \_/   |   /Don't Dare to copy ! |
+			  |	     ;f;       |  /______________________|
+			   \\            //
+			   / \ _______ /  \
+			  / 			   \
+			 //    \\\///      \\
+			///    ///\\\      \\\
+		   /////             \\\\\\
+		  ////////////\\\\\\\\\\\\\\
+		 ////////////  \\\\\\\\\\\\\\
+		/////////\\\\  /////\\\\\\\\\\
+	   ////////\\\\\\\////////\\\\\\\\\
+	  ///////   \\\\\\///////  \\\\\\\\\
+	 /////       \\\\\//////       \\\\\\
+	              {}      {}  
+			 }{{}}}{}}  {}}{}{{}{
+		  
+
+*/
 struct linked_list
 {
 	void *payload;
@@ -144,8 +164,9 @@ public:
 		while(dest.getsize()!=getsize())
 		{
 			dest.insert(iter->payload);
-			payload *dat=(payload*)dest.list->payload;
-			printf("%s\n",dat->str);
+			//experimental suggest not to uncomment this section..
+			//payload *dat=(payload*)dest.list->payload;
+			//printf("%s\n",dat->str);
 			iter=iter->next;
 
 		}
