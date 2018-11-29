@@ -64,6 +64,7 @@ linked_list *get_tip()
 {
 	linked_list *tmp=my;while(tmp->next!=NULL){tmp=tmp->next;}return tmp;
 }
+	
 void kill(linked_list *target)
 {
 	if(target!=NULL)
