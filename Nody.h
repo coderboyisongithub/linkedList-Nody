@@ -44,9 +44,9 @@ linked_list* attach_next(void *src)
 	
 	if(my->next!=NULL)
 		{printf("restricted node creation..bridge already occupied!!");
-	_getch();
-	exit(0);
-	}
+		 abort();
+		 //abort program rather than termination..
+		}
 	else{
 		my->next=(linked_list*)malloc(sizeof(linked_list));
 		my->next->prev=my;
